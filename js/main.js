@@ -20,13 +20,13 @@ function debounce(fx) {
 }
 
 
-let epoint = 'http://www.omdbapi.com/?'; //i=tt3896198&;
+let epoint = 'http://backend:8080/api/topics'; //i=tt3896198&;
 let apikey = 'apikey=c8d257dc';
 
 //FETCH POST
 const searchPelis = async (peli) => {
   const res = await fetch(
-    `${epoint}s=${peli}&${apikey}`
+    `${epoint}s=${peli}`
   );
   const data = await res.json();
   //return data; 
